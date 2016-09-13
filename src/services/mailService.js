@@ -1,8 +1,8 @@
 angular.module( "AngularMail" )
-.service( "mailService", function() {
-	this.getMail = function() {
-		return mail;
-	}
+	.service( "mailService", function() {
+		this.getMail = function() {
+			return mail;
+		};
 } );
 
 var mail = [

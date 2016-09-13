@@ -2,32 +2,41 @@
 	<input
 		class="form-control draft-input"
 		type="text"
+		ng-model="newMessage.to"
 		placeholder="To: someone@example.com"
 	>
 	<input
 		class="form-control draft-input"
 		type="text"
+		ng-model="newMessage.bcc"
 		placeholder="bcc: someone.else@example.com"
 	>
 	<input
 		class="form-control draft-input"
 		type="text"
+		ng-model="newMessage.subject"
 		placeholder="Subject"
 	>
 
 	<textarea
 		class="message-draft"
 		cols="30"
+		ng-model="newMessage.content"
 		rows="10"
 	>
 	</textarea>
 
-	<button class="btn btn-primary send-button">Send</button>
+	<button
+		class="btn btn-primary send-button"
+		ng-click="sendMessage( newMessage )"
+	>
+		Send
+	</button>
 
 	<div class="message-preview">
 		<h3>Preview</h3>
 		<p>
-			
+			{{ newMessage.content }}
 		</p>
 	</div>
 </main>
