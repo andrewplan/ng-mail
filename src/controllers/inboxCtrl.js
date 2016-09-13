@@ -9,4 +9,4 @@ angular.module( 'AngularMail' )
         $scope.selectMessage = function( message ) {
            $scope.selectedMessage = message;
         }
-} )
+} );

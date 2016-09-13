@@ -1,16 +1,20 @@
 <main class="inbox-wrapper">
 	<div class="mail-list-wrapper">
 		<ul class="mail-list">
-			<!-- Repeat over mail  -->
-			<!-- Add ng-click to select a specific message -->
-			<li
+			<!-- <li
 				class="message"
 				ng-repeat="message in mail"
 				ng-click="selectMessage( message )"
 			>
 				<h4>{{ message.content.slice( 0, 30 ) }}</h4>
 				<p>{{ message.name }}</p>
-			</li>
+			</li> -->
+			<message
+				message="message"
+				ng-repeat="message in mail"
+				select-message="selectMessage( message )"
+			>
+			</message>
 		</ul>
 	</div>
 
